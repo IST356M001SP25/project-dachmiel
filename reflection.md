@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Student Email:  email
+Student Name:  Daniel Chmielewski
+Student Email:  dachmiel@syr.edu
 
 ## Instructions
 
@@ -23,3 +23,6 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+In this project I got more experience working with APIs, data transformation using pandas, and building  visualizations using Streamlit and Plotly. First, I was able to fetch JSON data from a public API (CollegeFootballData API). Then I had to clean and transform it into a structured format and then use pivot tables to prep the data for analysis. I also became more comfortable using Streamlit components like selectbox, slider, and button to create a dynamic UI.
+
+One challenge I faced during this project was understanding how to manage the raw API data, which included nested dictionaries and categorical stats like "YDS", "COMPLETIONS", and "ATT". It took me some time to figure out how to filter the data by statType and use pivot tables. From this, I learned the importance of reading and understanding the data you are working with before attempting to manipulate it.
