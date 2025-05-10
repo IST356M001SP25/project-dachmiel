@@ -5,7 +5,7 @@ import pandas as pd
 API_KEY = "P7xOVOuI/mnAXloKj28aJjcAnUFW3nRQ+fdgwdLjqQt1Xu0ODlblEhmNeKrEaoKe"
 HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
-def fetch_passing_stats(year=2024):
+def fetch_passing_stats(year: int) -> pd.DataFrame:
     """
     Fetch passing stats from CollegeFootballData API and save to CSV.
     """
@@ -16,16 +16,14 @@ def fetch_passing_stats(year=2024):
     # print("Status Code:", response.status_code)
     # print("Response Body Preview:", response.text[:300])
 
-    response.raise_for_status()  # Raise error if the request fails
-
-    # Parse JSON data from the response
+    response.raise_for_status()
     data = response.json()
 
     # Convert the JSON data to a pandas DataFrame
     df = pd.DataFrame(data)
 
     # Save the DataFrame to a CSV file
-    df.to_csv("cache/passing_stats.csv", index=False)
+    df.to_csv(f"cache/passing_stats_{year}.csv", index=False)
 
     return df
 
